@@ -6,6 +6,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  base: './',
   build: {
     chunkSizeWarningLimit: 3000,
     rollupOptions: {
