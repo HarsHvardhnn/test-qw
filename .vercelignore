@@ -1,0 +1,10 @@
+src/
+public/
+node_modules/
+.git/
+*.md
+*.config.*
+tsconfig.*
+eslint.*
+package*.json
+pnpm-lock.yaml 
