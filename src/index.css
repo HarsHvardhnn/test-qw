@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .drag-over {
+    @apply ring-2 ring-blue-500 ring-opacity-50 bg-blue-50/50 scale-[1.01] shadow-lg;
+  }
+
+  .glassmorphic {
+    @apply bg-white/15 border border-white/20;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Hide scrollbar completely */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+  }
+
+  /* Modern conversation scrollbar */
+  .conversation-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .conversation-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .conversation-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.5);
+    border-radius: 20px;
+  }
+
+  .conversation-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.7);
+  }
+
+  .conversation-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full hover:bg-white/30 transition-colors;
+  }
+
+  /* Smooth transitions */
+  .hover-smooth {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  /* Z-index layers */
+  .z-modal {
+    @apply z-50;
+  }
+  
+  .z-modal-backdrop {
+    @apply z-40;
+  }
+  
+  .z-modal-content {
+    @apply z-50;
+  }
+
+  /* Scroll optimization utilities */
+  .will-change-scroll {
+    will-change: scroll-position;
+  }
+
+  .overscroll-behavior-y-contain {
+    overscroll-behavior-y: contain;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Draggable element styles */
+  [draggable="true"] {
+    cursor: grab;
+  }
+
+  [draggable="true"]:active {
+    cursor: grabbing;
+  }
+}
+
+@layer base {
+  html, body {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  #root {
+    @apply h-full;
+  }
+
+  /* Modern Form Styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    @apply bg-white text-gray-900 border border-gray-200 rounded-lg px-4 py-2.5 w-full transition-all duration-200;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  select:focus,
+  textarea:focus {
+    @apply outline-none ring-2 ring-blue-100 border-blue-500;
+  }
+
+  /* Checkbox Styles */
+  input[type="checkbox"] {
+    @apply h-5 w-5 rounded border-gray-300 text-blue-600 transition duration-150 ease-in-out;
+  }
+
+  input[type="checkbox"]:focus {
+    @apply ring-2 ring-offset-2 ring-blue-500;
+  }
+
+  input[type="checkbox"]:checked {
+    @apply bg-blue-600 border-transparent;
+  }
+
+  /* Select Styles */
+  select {
+    @apply appearance-none bg-no-repeat;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+
+.center-toast {
+  @apply fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 bg-white shadow-lg rounded-lg p-4 text-center;
+}
+
+
+
