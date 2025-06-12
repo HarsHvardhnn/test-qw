@@ -1,12 +1,8 @@
 {
   "version": 2,
   "name": "qwillo-vite-app",
-  "builds": [
-    {
-      "src": "dist/**/*",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
   "routes": [
     {
       "src": "/(.*)",
