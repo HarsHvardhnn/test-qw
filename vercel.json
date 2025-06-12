@@ -11,7 +11,12 @@
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|pdf|csv|zip))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
