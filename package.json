@@ -29,7 +29,6 @@
     "lucide-react": "^0.344.0",
     "moment": "^2.30.1",
     "mongoose": "^8.13.2",
-    "next": "^15.2.3",
     "pdfkit": "^0.16.0",
     "react": "^18.3.1",
     "react-confetti": "^6.4.0",
